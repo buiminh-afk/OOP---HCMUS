@@ -1,0 +1,30 @@
+bui ten gi ?
+bui
+minh
+ngu
+joe
+1
+con nay la con gi ?
+cho 
+meo
+bo 
+chuot
+2
+1 + 1 = ?
+1
+2
+3
+4
+2
+Binh pro dung khong ?
+dung 
+sai
+rat dung
+tat ca deu dung
+1
+abcd
+a
+b
+c
+d
+1
