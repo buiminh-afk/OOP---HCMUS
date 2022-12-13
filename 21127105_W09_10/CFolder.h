@@ -18,4 +18,5 @@ public:
     CItem *removeByName(string);
     CItem *findByName(string);
     void setHidden(bool, bool);
+    long calcSize();
 };

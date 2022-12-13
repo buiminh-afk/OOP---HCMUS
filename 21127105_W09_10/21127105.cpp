@@ -10,6 +10,7 @@ int main()
     CFile b_doc("b.doc", 456);
     ////////////////////////////
     System.add(&a_txt);
+    System.add(&b_doc);
     Windows.add(&b_doc);
     C.add(&System);
     C.add(&Windows);
@@ -18,9 +19,11 @@ int main()
     bool isPrintHiddenItems = false;
     C.print(isPrintHiddenItems);
     ////////////////////////////
-    CItem *p = C.removeByName("System");
-    cout << "Content of folder C after removing System folder ->" << endl;
+    CItem *p = C.removeByName("b.doc");
+    cout << "-------------------------------------------" << endl;
+    cout << "Content of folder C after removing b.doc ->" << endl;
     C.print(false);
+    cout << "-------------------------------------------" << endl;
     ////////////////////////////
     p = C.findByName("b.doc");
     if (p != NULL)
@@ -32,6 +35,7 @@ int main()
         cout << "b.doc is not found" << endl;
     }
     ////////////////////////////
+    cout << "-------------------------------------------" << endl;
     p = C.findByName("a.txt");
     if (p != NULL)
     {
@@ -41,6 +45,7 @@ int main()
     {
         cout << "a.txt is not found" << endl;
     }
+    cout << "-------------------------------------------" << endl;
     ////////////////////////////
     p = C.findByName("Windows");
     bool isHidden;
@@ -52,7 +57,9 @@ int main()
         isHidden = true;
         isAlsoApplyToChildren = false;
         p->setHidden(isHidden, isAlsoApplyToChildren);
-        p->print(false);
+        p->print(true);
+        cout << "-------------------------------------------" << endl;
+
         cout << "Folder Windows is folder. Content of folder Windows ->" << endl;
         // set HIDDEN to folder p and all its items
         isHidden = true;
@@ -64,5 +71,6 @@ int main()
     {
         cout << "Folder Windows is not found" << endl;
     }
+
     return 0;
 }

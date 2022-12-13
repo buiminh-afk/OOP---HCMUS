@@ -6,11 +6,9 @@ using namespace std;
 
 class CItem
 {
-private:
+protected:
     string name;
     long size;
-
-protected:
     bool hidden_attr = false;
 
 public:
@@ -20,6 +18,9 @@ public:
     string getName();
     long getSize();
     bool isHidden();
+    virtual CItem *removeByName(string) = 0;
+    virtual CItem *findByName(string) = 0;
     virtual void print(bool) = 0;
     virtual void setHidden(bool, bool) = 0;
+    virtual long calcSize() = 0;
 };

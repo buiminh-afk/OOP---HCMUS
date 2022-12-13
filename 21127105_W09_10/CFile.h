@@ -17,4 +17,7 @@ public:
     void print(bool);
     void setHidden(bool);
     void setHidden(bool A, bool B) { this->hidden_attr = A; };
+    long calcSize();
+    CItem *removeByName(string);
+    CItem *findByName(string);
 };
